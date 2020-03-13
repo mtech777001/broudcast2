@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "$"
+const prefix = "*"
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 const devs = ["336374035141230592"]
  
-const adminprefix = "$";
+const adminprefix = "*";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
